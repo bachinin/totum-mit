@@ -1,18 +1,6 @@
 #!/bin/bash
 
 
-if [[ $(sudo ps aux | grep -i apt | wc -l) -ne 1 ]]
-then
-  echo
-  echo "THIS SERVER IS NOW INSTALLING SOMETHING, WAIT 5 MIN AND TRY AGAIN"
-  echo
-  exit 0
-else
-  echo
-  echo "APT is OK..."
-  echo
-fi
-
 if [[ $(sudo cat /etc/issue | grep -c 'Ubuntu 20') -ne 1 ]]
 then
   echo

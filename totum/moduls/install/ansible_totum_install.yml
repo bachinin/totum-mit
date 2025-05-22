@@ -606,7 +606,7 @@
 
   - name: Clone Totum repository
     git:
-      repo: https://github.com/totumonline/totum-mit.git
+      repo: https://github.com/bachinin/totum-mit.git
       dest: /home/totum/totum-mit
       version: dev
       update: yes

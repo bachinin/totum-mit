@@ -18,7 +18,7 @@ then
   echo
   echo -e "\e[40;1;37mTHIS SERVER HAVE NOT \e[40;1;31men_US.UTF-8\e[40;1;37m LOCALE. YOU HAVE TO EXECUTE:"
   echo
-  echo -e "sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh" 
+  echo -e "sudo curl -O https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh" 
   echo
   echo -e "AND FOLLOW THE ON-SCREEN INSTRUCTIONS TO SETUP THE CORRECT LOCALE\033[0m"
   echo
@@ -30,12 +30,12 @@ fi
 if [[ $TOTUMLOCALE = "A" ]]
 then
 echo
-sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh
+sudo curl -O https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh
 echo
 elif [[ $TOTUMLOCALE = "a" ]]
 then
 echo
-sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh
+sudo curl -O https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/setlocale.sh && sudo bash setlocale.sh
 echo
 elif [[ $TOTUMLOCALE = "RUN" ]]
 then
@@ -234,7 +234,7 @@ sudo timedatectl set-timezone $TOTUMTIMEZONE
 sudo apt -y install php8.0 php8.0-bcmath php8.0-cli php8.0-curl php8.0-fpm php8.0-gd php8.0-mbstring php8.0-opcache php8.0-pgsql php8.0-xml php8.0-zip php8.0-soap php8.0-ldap
 sudo service apache2 stop
 sudo systemctl disable apache2
-sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/totum_fpm.conf
+sudo curl -O https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/totum_fpm.conf
 sudo chown root:root ./totum_fpm.conf
 sudo mv ./totum_fpm.conf /etc/php/8.0/fpm/pool.d/totum.conf
 sudo sed -i "s:Europe/London:${TOTUMTIMEZONE}:g" /etc/php/8.0/fpm/pool.d/totum.conf
@@ -256,11 +256,11 @@ cd ~
 # Install Nginx
 
 sudo apt -y install nginx
-sudo curl -O https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/totum_nginx.conf
+sudo curl -O https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/totum_nginx.conf
 sudo chown root:root ./totum_nginx.conf
 sudo mv ./totum_nginx.conf /etc/nginx/sites-available/totum.online.conf
 sudo sed -i "s:/var/www/:/home/totum/:g" /etc/nginx/sites-available/totum.online.conf
-sudo curl -O https://raw.githubusercontent.com/totumonline/ttmonline-mit-image/main/certbot/acme
+sudo curl -O https://raw.githubusercontent.com/bachinin/ttmonline-mit-image/main/certbot/acme
 sudo chown root:root ./acme
 sudo mv ./acme /etc/nginx/acme
 sudo mkdir -p /var/www/html/.well-known/acme-challenge

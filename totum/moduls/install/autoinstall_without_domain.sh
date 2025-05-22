@@ -271,7 +271,7 @@ sudo service nginx restart
 
 # Install Totum from user Totum
 
-sudo -u totum bash -c "git clone https://github.com/totumonline/totum-mit.git /home/totum/totum-mit"
+sudo -u totum bash -c "git clone https://github.com/bachinin/totum-mit.git /home/totum/totum-mit"
 sudo -u totum bash -c "php -r \"copy('https://getcomposer.org/installer', '/home/totum/totum-mit/composer-setup.php');\""
 cd /home/totum/totum-mit
 sudo -u totum bash -c "php /home/totum/totum-mit/composer-setup.php --quiet"

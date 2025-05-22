@@ -455,7 +455,7 @@
 
   - name: Download totum_fpm.conf
     get_url:
-      url: https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/totum_pool.conf
+      url: https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/totum_pool.conf
       dest: /etc/php/8.3/fpm/pool.d/totum.conf
       owner: root
       group: root
@@ -527,7 +527,7 @@
 
   - name: Download totum.online.conf
     get_url:
-      url: https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/totum.online.conf
+      url: https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/totum.online.conf
       dest: /etc/nginx/sites-available/totum.online.conf
       owner: root
       group: root
@@ -535,7 +535,7 @@
 
   - name: Download totum.online.conf.ip
     get_url:
-      url: https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/totum.online.conf.ip
+      url: https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/totum.online.conf.ip
       dest: /etc/nginx/sites-available/totum.online.conf
       owner: root
       group: root
@@ -985,7 +985,7 @@
 
   - name: Switch IP to Domain - Download totum.online.conf
     get_url:
-      url: https://raw.githubusercontent.com/totumonline/totum-mit/master/totum/moduls/install/totum.online.conf
+      url: https://raw.githubusercontent.com/bachinin/totum-mit/master/totum/moduls/install/totum.online.conf
       dest: /etc/nginx/sites-available/totum.online.conf
       owner: root
       group: root
